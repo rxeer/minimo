@@ -1,0 +1,61 @@
+@import "../../libs/vars";
+@import "../../libs/mixins";
+
+.button {
+  color: $btn-color;
+  user-select: none;
+  line-height: 1.25;
+  text-align: center;
+  font-weight: normal;
+  white-space: nowrap;
+  border: $btn-border;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: $border-radius;
+  transition: all 0.2s ease-in-out;
+  font-size: $btn-font-size/16 + rem;
+  letter-spacing: $btn-letter-spacing;
+  text-transform: $btn-text-transform;
+  padding: $btn-padding-top-bottom $btn-padding-left-right;
+
+  &:hover {
+    color: #959595;
+    cursor: pointer;
+    border: 1px solid #959595;
+  }
+}
+
+.button--theme-white {
+  background: $bg-button-white;
+}
+
+.button--theme-red {
+  background: $bg-button-red;
+
+  &:hover {
+    background: #a3513f;
+  }
+}
+
+.button--theme-violet {
+  background: $bg-button-violet;
+
+  &:hover {
+    background: #767bb3;
+  }
+}
+
+.button--theme-dark {
+  background: $bg-button-dark;
+
+  &:hover {
+    background: $bg-button-dark-hover;
+  }
+}
+
+.button--read-more {
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+}

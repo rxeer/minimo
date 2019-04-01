@@ -1,0 +1,10 @@
+-var components = { logo: true, menu: true, search: false, social: false }
+
+header.header.page__header
+    if components.logo
+        include ../components/logo/_logo
+    if components.menu
+        include ../components/menu/_menu
+    if components.search
+    if components.social
+        include ../components/social/_social

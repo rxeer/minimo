@@ -1,0 +1,17 @@
+-var action = '  '
+-var placeholder = "Enter a valid email address"
+-
+mixin input($type, $name, $placeholder)
+    if $placeholder
+        input.input.submit-form__input(placeholder=`${$placeholder}` name=`${$name}` type=`${$type}` require=true)
+    else
+        input.input.submit-form__input(name=`${$name}` type=`${$type}` require=true)
+
+form(
+    action=`${action}`
+    novalidate=true
+    method="post"
+    class="submit-form"
+    )
+    +input('email', 'EMAIL', placeholder)
+    button.button.submit-form__btn(type="submit")

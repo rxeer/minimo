@@ -1,0 +1,119 @@
+@import "libs/mixins";
+
+@include reset('normalize');
+@include boxModel('border');
+@import "base/typography";
+@import 'components/page';
+@import 'components/header';
+@import 'components/button/button';
+@import 'components/heading/heading';
+@import 'components/icon';
+@import 'components/social/social';
+@import 'components/caption/caption';
+@import 'components/submit-form/submit-form';
+
+@include container(900px);
+
+.container-fluid {
+  width: calc(100vw - 10vw);
+  max-width: 100%;
+}
+
+.about {
+  @media all and (max-width: 992px) {
+    &__text-content {
+      flex-basis: 100%;
+      padding: 4.25rem 0 4.25rem 0;
+    }
+    &__icon-content {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.blog__posts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+
+  @media all and (max-width: 600px) {
+    & {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.blog-post {
+  flex: 0 0 46.6666%;
+  margin-bottom: 130/16 + rem;
+  font-size: 0.875rem;
+
+  & img {
+    margin-bottom: 30/16 + rem;
+  }
+
+  & p:last-child {
+    margin: 0;
+
+    @media all and (max-width: 500px) {
+      & {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  & a {
+    display: inline-block;
+    margin-bottom: 2rem;
+
+    @media all and (max-width: 500px) {
+      & {
+        margin-bottom: 1rem;
+      }
+
+      &:hover {
+        color: #6d6d6f;
+        text-decoration: underline;
+      }
+    }
+  }
+  @media all and (max-width: 500px) {
+    & {
+      flex: 1 auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blog-post:last-child, .blog-post:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.about p:nth-last-child(2) {
+  margin-bottom: 4.5rem;
+
+  @media all and (max-width: 500px) {
+    & {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.about__type, .comment, .blog-post__type {
+  font-size: $font-size--small;
+  color: $color-link;
+  text-transform: uppercase;
+}
+
+.comment {
+  display: inline-block;
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mailing__title {
+  margin-bottom: 80/16 + rem;
+}

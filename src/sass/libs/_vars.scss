@@ -1,0 +1,100 @@
+/// Base font setting
+$base-size: 16;
+$base-font-size: 1rem;
+$base-font-weight: 500;
+$base-line-height: 30pt;
+$base-font-family: 'Playfair Display', Arial, sans-serif;
+$alt-font-family: 'Ubuntu', Arial, sans-serif;
+$font-size--small: 14px;
+$font-size--large: 32px;
+
+/// Headings
+
+$font-size--h1: 45/$base-size + rem;
+$font-size--h2: 30/$base-size + rem;
+$font-size--h3: 20/$base-size + rem;
+$font-size--h4: 1rem;
+$font-size--h5: 54/$base-size + rem;
+$font-size--h6: 54/$base-size + rem;
+
+// Duration.
+
+$transitions-link: 0.2s;
+
+// Size.
+
+$letter-spacing: 0.075em;
+$letter-spacing-alt: 0.225em;
+$margin-element: 1rem;
+
+// Palette.
+$color-link: #b4ad9e;
+$color-text: #626262;
+$color-heading: #3d3d3d;
+$placeholder-color: #909090;
+$color-heading-hr: #f16522;
+$color-hr: #e7eaed;
+$color-btn-red: #612316;
+$bg-header: 'bg-header.jpg';
+$bg-footer: #f0f0f0;
+$bg-button-white: #ffffff;
+$bg-button-red: #dd4b2b;
+$bg-button-violet: #4b4e73;
+$bg-button-dark: #363636;
+$bg-button-dark-hover: #6c6c6c;
+
+/// Menu component
+
+$list-margin: 0;
+$color-menu: #626262;
+$color-menu-hover: #9b9b9b;
+$menu-bg-item: transparent;
+$menu-bg-item-hover: transparent;
+$menu-text-transform: uppercase;
+$menu-font-size: 14;
+$menu-padding: 0;
+$menu-margin-right: 100/16 + rem;
+
+/// List component
+
+$color-list: #fff;
+
+///Form-submit component
+
+$sbm-position: center;
+$sbm-width: 100%;
+$sbm-height: 35px;
+$sbm-color: #333;
+$sbm-border-radius: none;
+$sbm-padding: 0 0 0 .7rem;
+$sbm-bg: transparent;
+
+$sbm-btn-theme: transparent;
+$sbm-btn-theme-hover: transparent;
+$sbm-btn-theme-color-hover: #ba5651;
+
+/// Social component
+$social-margin-left: 20px;
+
+/// Caption component
+$caption-position: left;
+
+/// Feature component
+$ft-margin-bottom: 3rem;
+$ft-heading-font-size: 20px;
+$ft-para-font-size: 16px;
+$ft-heading-padding-top: 50px;
+$ft-para-padding-top: 50px;
+
+///	Block button
+
+$border-radius: 2;
+$btn-padding-top-bottom: 20px;
+$btn-padding-left-right: 35px;
+$btn-color: #626262;
+$btn-letter-spacing: 0;
+$btn-font-size: 20;
+$btn-text-transform: none;
+$btn-border: 1px solid #626262;
+
+$brakepoint-tablet: 776px;

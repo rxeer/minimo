@@ -1,0 +1,23 @@
+@import "../../libs/vars";
+@import "../../libs/mixins";
+
+.social {
+  &__list {
+    @include list-item-align();
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & li {
+      margin-left: $social-margin-left;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    & a :hover {
+
+    }
+  }
+}

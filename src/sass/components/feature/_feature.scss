@@ -1,0 +1,17 @@
+@import "../../libs/vars";
+@import "../../libs/mixins";
+
+.feature {
+  margin-bottom: $ft-margin-bottom;
+
+  & .heading {
+    font-size: $ft-heading-font-size;
+    padding-top: $ft-heading-padding-top;
+  }
+
+  & p {
+    font-size: $ft-para-font-size;
+    padding-top: $ft-para-padding-top;
+    line-height: 28px;
+  }
+}
