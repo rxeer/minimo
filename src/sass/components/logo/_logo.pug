@@ -1,0 +1,15 @@
+-var url = '../img/logo.png'
+-var alt = 'Minimo'
+-
+mixin logo(text, slogan)
+    .logo
+        if (typeof slogan === 'string' && typeof text === 'string')
+            h1.logo__text
+                a.logo__link #{text}
+                    span.logo__slogan #{slogan}
+        else if (typeof text === 'string')
+            h1.logo__text: a.logo__link #{text}
+        else
+            a(href='index.html' title=`${alt}`): img(src=`${url}` alt=`${alt}` class="logo__image")
+
++logo()

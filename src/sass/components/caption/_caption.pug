@@ -1,0 +1,9 @@
+-
+mixin caption(contentH, target, add, isBtn)
+    section.caption
+        h1.caption__heading #{contentH}
+        #{target}.caption__props #{add}
+        if isBtn
+            a.button(href="") Learn More
+
++caption('Agency Freebie psd download', 'p', 'Maecenas suscipit imperdiet nisi ac hendrerit. Nam congue felis ac massa rutrum pulvinar. Donec sodales eros sed efficitur mattis. Integer tincidunt, felis a placerat maximus, eros nulla dapibus dui, at facilisis enim odio at velit. Aenean dictum eleifend mi sit amet luctus.', false)

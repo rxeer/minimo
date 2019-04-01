@@ -1,0 +1,32 @@
+@import "../libs/vars";
+@import "../components/input";
+
+$bg-btn-color: #d1d1d1;
+
+.form-group {
+  position: relative;
+
+  &__btn {
+    top: 0;
+    right: 0;
+    font-weight: 700;
+    padding-left: 5rem;
+    position: absolute;
+    padding-right: 5rem;
+    color: $color-btn-red;
+
+    &:hover {
+      background: $bg-btn-color;
+      color: $color-btn-red;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0 2rem;
+    line-height: 49px;
+    border-radius: 52px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, .7)
+  }
+}

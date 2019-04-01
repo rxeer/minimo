@@ -1,0 +1,49 @@
+@import "../libs/vars";
+@import "../libs/mixins";
+
+%pad {
+  padding-top: 100/16 + rem;
+  padding-bottom: 100/16 + rem;
+}
+
+.page__header {
+  height: 100px;
+}
+
+.page__banner {
+  height: calc(100vh - 100px);
+  background: url("../img/bg-header.jpg") no-repeat 0 0/ cover;
+}
+
+.page__about {
+  padding-top: 90/16 + rem;
+}
+
+.page__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.page__blog {
+  @extend %pad;
+
+  @media all and (max-width: 500px) {
+    & {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+  }
+}
+
+.page__mailing {
+  text-align: center;
+  background: $bg-footer;
+  padding: 70/16 + rem 0;
+}
+
+.page__footer {
+  padding: 30/16 + rem 0;
+  background: $bg-footer;
+  font-size: 14/16 + rem;
+}

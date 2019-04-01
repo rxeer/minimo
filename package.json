@@ -1,0 +1,33 @@
+{
+  "name": "minimo",
+  "version": "1.0.0",
+  "description": "Markup for minimo website",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "9.5.0",
+    "gulp": "4.0.0",
+    "gulp-concat": "2.6.1",
+    "gulp-imagemin": "5.0.3",
+    "gulp-postcss": "8.0.0",
+    "gulp-pug": "4.0.1",
+    "gulp-sass": "4.0.2",
+    "node-sass": "4.11.0",
+    "postcss-assets": "5.0.0"
+  },
+  "scripts": {
+    "gulp:sass": "gulp sass",
+    "gulp:img": "gulp images"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rxeer/minimo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rxeer/minimo/issues"
+  },
+  "homepage": "https://github.com/rxeer/minimo#readme"
+}

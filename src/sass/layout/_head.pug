@@ -1,0 +1,19 @@
+-var title = 'MINIMO - MINIMO Blog'
+-var styles = ['css/app.css']
+-
+mixin source(elements, scriptsOrStyles)
+    if scriptsOrStyles === 'script'
+        each elem in elements
+            script(src=`${elem}`)
+    else
+        each elem in elements
+            link(rel="stylesheet" href=`${elem}`)
+head
+    meta(charset="UTF-8")
+    title #{title}
+    meta(name="viewport"
+    content="width=device-width initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0")
+    meta(content="width=1024" name="viewport")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(href="https://fonts.googleapis.com/css?family=Playfair+Display|Ubuntu:300" rel="stylesheet")
+    +source(styles, 'link')

@@ -1,0 +1,72 @@
+@import "../../libs/vars";
+@import "../../libs/mixins";
+
+.menu {
+  &__list {
+    @include list-item-align();
+    height: 100%;
+    margin: 0;
+    list-style: none;
+    font-weight: $base-font-weight;
+    color: $color-menu;
+  }
+
+  &__item {
+    margin-right: $menu-margin-right;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media all and (max-width: 770px) {
+      & {
+        margin-right: 2.4375vw;
+      }
+    }
+
+  }
+
+  &__link {
+    outline: 0;
+    border: 0;
+    color: inherit;
+    height: inherit;
+    line-height: inherit;
+    display: inline-block;
+    padding: $menu-padding;
+    background: $menu-bg-item;
+    text-transform: $menu-text-transform;
+    font-size: $menu-font-size/$base-size + rem;
+
+    &--underline {
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+      box-shadow: 0 0 1px transparent;
+      transform: perspective(1px) translateZ(0);
+
+      &:after {
+        bottom: 0;
+        height: 2px;
+        z-index: -1;
+        left: 10px;
+        right: 100%;
+        content: " ";
+        background: #fff;
+        position: absolute;
+        transition-property: right;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      &:hover::after {
+        right: 10px;
+      }
+    }
+
+    &:hover {
+      color: $color-menu-hover;
+      background: $menu-bg-item-hover;
+    }
+  }
+}

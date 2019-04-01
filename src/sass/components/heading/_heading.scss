@@ -1,0 +1,36 @@
+@import "../../libs/vars";
+@import "../../libs/mixins";
+
+.heading {
+  font-family: $base-font-family;
+  display: block;
+}
+
+.heading--small {
+  font-size: 0.5em;
+}
+
+.heading--normal {
+  font-size: 1rem;
+}
+
+.heading--big {
+  font-size: 40/16 + rem;
+}
+
+.heading--medium {
+  font-size: 50/16 + rem;
+}
+
+.heading--large {
+  font-size: 90/16 + rem;
+  line-height: 80px;
+}
+
+.heading--bold {
+  font-weight: 700;
+}
+
+.heading--italic {
+  font-style: italic;
+}
