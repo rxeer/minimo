@@ -1,0 +1,16 @@
+
+.footer {
+  &__link {
+    & a {
+      margin-right: 30/16 + rem;
+    }
+  }
+
+  &__social {
+    display: flex;
+
+    & p {
+      margin: 9px 20px 0 0;
+    }
+  }
+}
