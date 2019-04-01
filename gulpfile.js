@@ -1,6 +1,6 @@
 'use-strict';
 
-const gulp= require('gulp');
+const gulp = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const cssnano = require('cssnano');
