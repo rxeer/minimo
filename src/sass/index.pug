@@ -1,21 +1,18 @@
+-var baseImageUrl = 'img';
 -
-mixin feature(headingAs, className, contentHeading, contentP)
+mixin feature(headingAs, className, contentHeading, contentP, imageName)
     article(class=`${className}`)
         p.blog-post__type
-        img(src="" alt="" title="")
-        #{headingAs}.heading #{contentHeading}
+        img(src=`${baseImageUrl}/${imageName}` alt="" title="")
+        a(href="")
+            #{headingAs}.heading #{contentHeading}
         p #{contentP}
-mixin  major(as, className, contH, contP)
-    #{as}.heading(class=`${className}`) #{contH}
-    p #{contP}
-
-
 
 doctype
 html(lang="en")
     include layout/_head
     body.page
-        .container
+        .container-fluid
             include layout/_header
         section.banner.page__banner
         main
@@ -27,25 +24,26 @@ html(lang="en")
                     p.comment Leave a comment
 
             section.blog.page__blog
-                .container
-                    +feature('h3', 'blog-post', 'More than just a music festival', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
-                    +feature('h3', 'blog-post', 'Life tastes better with coffee', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
-                    +feature('h3', 'blog-post', 'American dream', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
-                    +feature('h3', 'blog-post', 'A day exploring the Alps', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
+                .container.page__inner
+                    +feature('h3', 'blog-post', 'More than just a music festival', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_1.jpg')
+                    +feature('h3', 'blog-post', 'Life tastes better with coffee', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_2.jpg')
+                    +feature('h3', 'blog-post', 'American dream', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_3.jpg')
+                    +feature('h3', 'blog-post', 'A day exploring the Alps', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_4.jpg')
             section.mailing.page__mailing
                 .container
-                    h2.heading  Sign up for our newsletter!
+                    h2.mailing__title  Sign up for our newsletter!
                     include components/submit-form/_submit-form
 
             section.blog.page__blog
-                .container
-                    +feature('h3', 'blog-post', 'Top 10 song for running', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
-                    +feature('h3', 'blog-post', 'Cold winter days', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ')
+                .container.page__inner
+                    +feature('h3', 'blog-post', 'Top 10 song for running', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_6.jpg')
+                    +feature('h3', 'blog-post', 'Cold winter days', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea ', 'blog-post_5.jpg')
 
             footer.footer.page__footer
-                .footer__link
-                    a(href="") Terms and conditions
-                    a(href="") Privacy
-                .footer__social
-                    p Follow
-                    include components/social/_social
+                .container-fluid.page__inner
+                    .footer__link
+                        a(href="") Terms and conditions
+                        a(href="") Privacy
+                    .footer__social
+                        p Follow
+                        include components/social/_social

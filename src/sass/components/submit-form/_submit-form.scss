@@ -1,7 +1,5 @@
 @import "../../libs/vars";
-@import "../../libs/mixins";
 @import "../input";
-
 
 .submit-form {
   top: 50%;
@@ -51,4 +49,8 @@
       color: $sbm-btn-theme-color-hover;
     }
   }
+}
+
+.mailing__title {
+  margin-bottom: 3rem;
 }
